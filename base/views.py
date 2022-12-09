@@ -10,3 +10,6 @@ def toc(request):
 
 def faqs(request):
     return render(request, 'base/faqs.html', {})
+
+def privacypolicy(request):
+    return render(request, 'base/privacy-policy.html', {})
