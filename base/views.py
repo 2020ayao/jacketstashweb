@@ -6,7 +6,7 @@ def index(request):
     return render(request, 'base/index.html', {})
 
 def toc(request):
-    return HttpResponse("Terms and Conditions")
+    return render(request, 'base/terms-conditions.html', {})
 
 def faqs(request):
     return render(request, 'base/faqs.html', {})
