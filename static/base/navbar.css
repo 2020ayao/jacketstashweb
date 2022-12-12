@@ -1,0 +1,5 @@
+#navbar-section,#nav-faq,
+#nav-toc,#nav-privacypolicy, #nav-home{
+    font-weight: bold;
+    /* And whatever other styles the current link should have. */
+}
