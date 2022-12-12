@@ -2,7 +2,6 @@ Django
 gunicorn
 django-heroku
 django-allauth
-django-friendship
 psycopg2
 psycopg2-binary
 django-bootstrap-v5
