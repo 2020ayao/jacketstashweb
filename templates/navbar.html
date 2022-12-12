@@ -1,4 +1,4 @@
-{% load active_link_tags %}{% load static %}
+{% load static %}
 <link rel="stylesheet" href="{% static 'base/navbar.css' %}" />
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar-section">
   <a class="navbar-brand" href="{% url 'index' %}">
@@ -24,20 +24,33 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item {% active_link 'index' 'active' %}" id="nav-home">
-        <a class="nav-link" href="{% url 'index' %}">Home</a>
-      </li>
-      <li class="nav-item {% active_link 'faqs' 'active' %}" id="nav-faq">
-        <a class="nav-link" href="{% url 'faqs' %}">FAQ</a>
-      </li>
-      <li class="nav-item {% active_link 'toc' 'active' %}" id="nav-toc">
-        <a class="nav-link" href="{% url 'toc' %}">Terms & Conditions</a>
-      </li>
+      {% url 'index' as url %}
       <li
-        class="nav-item {% active_link 'privacypolicy' 'active' %}"
+        class="nav-item {% if request.path == url %}active{% endif %}"
+        id="nav-home"
+      >
+        <a class="nav-link" href="{{ url }}">Home</a>
+      </li>
+      {% url 'faqs' as url %}
+      <li
+        class="nav-item {% if request.path == url %}active{% endif %}"
+        id="nav-faq"
+      >
+        <a class="nav-link" href="{{ url }}">FAQ</a>
+      </li>
+      {% url 'toc' as url %}
+      <li
+        class="nav-item {% if request.path == url %}active{% endif %}"
+        id="nav-toc"
+      >
+        <a class="nav-link" href="{{ url }}">Terms & Conditions</a>
+      </li>
+      {% url 'privacypolicy' as url %}
+      <li
+        class="nav-item {% if request.path == url %}active{% endif %}"
         id="nav-privacypolicy"
       >
-        <a class="nav-link" href="{% url 'privacypolicy' %}">Privacy Policy</a>
+        <a class="nav-link" href="{{ url }}">Privacy Policy</a>
       </li>
     </ul>
   </div>
