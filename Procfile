@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn jacketstash.wsgi
+web: gunicorn JacketStash_Web.wsgi
