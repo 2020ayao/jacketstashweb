@@ -2,6 +2,7 @@ Django
 gunicorn
 django-heroku
 django-allauth
+active-link
 psycopg2
 psycopg2-binary
 django-bootstrap-v5
