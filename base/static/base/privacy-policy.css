@@ -1,0 +1,22 @@
+#streamline-font {
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  p {
+      color: black;
+      font-size: 90%;
+    }
+  
+  #header {
+    
+    padding: 5%;
+  }
+  
+  #title {
+    font-weight:bold;
+    padding-left: 4%;
+  }
+  
+  #text {
+  padding-left: 4%;
+  }

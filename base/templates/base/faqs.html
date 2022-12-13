@@ -1,21 +1,43 @@
-{% extends 'main.html' %} {% load bootstrap5 %} {% load static %}
+{% extends 'main.html' %} {% load static %} {% load bootstrap5 %}
 <!--protect-->{% block content %}
-
+<!--protect-->
+<link rel="stylesheet" href="{% static 'base/faq.css' %}" />
 <body>
-  <p>This is the FAQ's page</p>
-  <h4>How do we keep your jacket secure?</h4>
-  <p>
-    It's simple. JacketStash uses a secure backend to process all check in and
-    check out events. Our backend server, Firebase, is Google-backed and
-    certified.
-  </p>
+  <div id="streamline-font">
+    <div id="header">
+      <h3 class="text-center">Frequently Asked Questions</h3>
+    </div>
+    <h4 id="question">How do we keep your jacket secure?</h4>
+    <p id="answer">
+      It's simple. JacketStash uses a secure backend to process all check in and
+      check out events. Your unique coat id number corresponds to a hanger we
+      own, so that only you get back your coat once checked in.
+    </p>
 
-  <h4>Why is the price so low?</h4>
-  <p>
-    Our mission is to provide affordable, secure checkins for college town bars.
-    We make our profit on repeat customers, and have knocked the price down
-    wherever we could.
-  </p>
+    <h4 id="question">Why is the price so low?</h4>
+    <p id="answer">
+      Our mission is to provide affordable, secure checkins for college town
+      bars. We make our profit on repeat customers, and have knocked the price
+      down wherever we could.
+    </p>
+
+    <h4 id="question">What happens if I forget to check out?</h4>
+    <p id="answer">
+      Because we have your name down in our secure database, we'll make a note
+      of your name and return it to the bar you were at. We'll also send an
+      email toward the end of the night if we notice you haven't checked out
+      yet.
+    </p>
+
+    <h4 id="question">How are we keeping jackets secured?</h4>
+    <p id="answer">
+      We vet bars before going into partnership with them on the basis of
+      security, staff, and overall performance. The bars will be responsible for
+      the security and safety of the coats once stored inside. Coats are kept
+      behind a counter, and only staff members will be allowed to access
+      hangers.
+    </p>
+  </div>
 </body>
 
 {% endblock %}
