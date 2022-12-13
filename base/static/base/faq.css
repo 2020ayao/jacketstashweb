@@ -1,5 +1,9 @@
 p {
-    color: blue;
+    color: red;
     font-family: courier;
     font-size: 160%;
   }
+
+div {
+  padding-top: 50px;
+}
